@@ -1,0 +1,51 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\GenericRepository\GenericRepository;
+
+class GenericRepositoryRepository
+{
+    private GenericRepository $entity;
+    public function __construct(GenericRepository $entity)
+    {
+        $this->entity = $entity;
+    }
+
+    public function all()
+    {
+        return $this->entity->newQuery()->get();
+    }
+
+    public function create(array $property)
+    {
+        return $this->entity->newQuery()->create($property);
+    }
+
+    public function paginate(int $totalPage)
+    {
+        return $this->entity
+            ->newQuery()
+            ->orderBy('created_at', 'DESC')
+            ->paginate($totalPage);
+    }
+
+    public function findOrFail($id)
+    {
+        return $this->entity->newQuery()->findOrFail($id);
+    }
+
+    public function update($id, array $property)
+    {
+        $employeeregister = $this->findOrFail($id);
+        $employeeregister->update($property);
+
+        return $employeeregister;
+    }
+
+    public function delete(string $id)
+    {
+        $employeeregister = $this->findOrFail($id);
+        return $employeeregister->delete();
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "lucasa/composer-php",
+    "description": "Criar Crud através de linha de comando",
+    "autoload": {
+        "psr-4": {
+            "Lucasa\\ComposerPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "LucasAlvesdosSantos",
+            "email": "lucas.santos@rodobank.com.br"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lucasa\\ComposerPhp\\ServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Http\Controllers\Api\GenericRoute\GenericRouteController;
+use Illuminate\Support\Facades\Route;
+
+class GenericRouteRoutes
+{
+    public static function routes(): void
+    {
+        Route::group(['prefix' => 'GenericRoute/'], function () {
+            Route::get('list', [GenericRouteController::class, 'index']);
+            Route::post('add', [GenericRouteController::class, 'store']);
+            Route::put('edit/{id}', [GenericRouteController::class, 'update']);
+            Route::delete('delete/{id}', [GenericRouteController::class, 'destroy']);
+
+        });
+    }
+}

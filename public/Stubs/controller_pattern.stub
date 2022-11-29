@@ -1,0 +1,90 @@
+<?php
+
+namespace App\Http\Controllers\GenericController;
+
+use App\Http\Controllers\Controller;
+use App\Http\Requests\GenericController\GenericControllerRequest;
+use App\Services\GenericController\GenericControllerService;
+use Exception;
+use Illuminate\Http\RedirectResponse;
+
+class GenericControllerController extends Controller
+{
+    private GenericControllerService $GenericControllerService;
+    private string $title = 'GenericController';
+    private string $route_index = 'GenericController.index';
+    private string $create = 'GenericController.create';
+
+    public function __construct(GenericControllerService $GenericControllerService)
+    {
+        $this->GenericControllerService = $GenericControllerService;
+    }
+
+    public function index()
+    {
+        try {
+            $GenericController = $this->GenericControllerService->all();
+            return view($this->route_index, compact('GenericController'));
+        } catch (Exception $e) {
+            alert()->error('Ops', 'Algo deu errado.');
+            return redirect()->back();
+        }
+    }
+
+    public function create()
+    {
+        try {
+            return view($this->create);
+        } catch (Exception $e) {
+            alert()->error($this->title . " não encontrada.");
+            return redirect()->back();
+        }
+    }
+
+    public function store(GenericControllerRequest $request): RedirectResponse
+    {
+        try {
+            $this->GenericControllerService->create($request->validated());
+            alert()->success($this->title . ' Cadastrado com Sucesso.');
+            return redirect()->route($this->route_index);
+        } catch (Exception $e) {
+            alert()->error($e->getMessage());
+            return redirect()->back();
+        }
+    }
+
+    public function show($id)
+    {
+        try {
+            $GenericController = $this->GenericControllerService->findOrFail($id);
+            return view('GenericController.show', compact('GenericController'));
+        } catch (Exception $e) {
+            alert()->error($this->title . " não encontrada.");
+            return redirect()->back();
+        }
+    }
+
+    public function update(GenericControllerRequest $request, $id): RedirectResponse
+    {
+        try {
+            $this->GenericControllerService->update($id, $request->validated());
+            alert()->success($this->title . " editado com sucesso.");
+            return redirect()->route($this->route_index);
+        } catch (Exception $e) {
+            alert()->error($e->getMessage());
+            return redirect()->back();
+        }
+    }
+
+    public function destroy($id): RedirectResponse
+    {
+        try {
+            $this->GenericControllerService->delete($id);
+            alert()->success($this->title . " excluído com sucesso.");
+            return redirect()->route($this->route_index);
+        } catch (Exception $e) {
+            alert()->error($e->getMessage());
+            return redirect()->back();
+        }
+    }
+}

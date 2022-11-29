@@ -1,0 +1,46 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Repositories\Api\GenericService\GenericServiceRepository;
+
+class GenericServiceService
+{
+    private GenericServiceRepository $GenericServiceRepository;
+
+    public function __construct(GenericServiceRepository $GenericServiceRepository)
+    {
+        $this->GenericServiceRepository = $GenericServiceRepository;
+    }
+
+    public function all()
+    {
+        return $this->GenericServiceRepository->all();
+    }
+
+    public function create(array $property)
+    {
+        return $this->GenericServiceRepository->create($property);
+    }
+
+    public function paginate(int $totalPage)
+    {
+        return $this->GenericServiceRepository->paginate($totalPage);
+    }
+
+    public function findOrFail($id)
+    {
+        return $this->GenericServiceRepository->findOrFail($id);
+    }
+
+    public function update($id, array $property)
+    {
+        return $this->GenericServiceRepository->update($id, $property);
+    }
+
+    public function delete(string $id)
+    {
+        return $this->GenericServiceRepository->delete($id);
+    }
+
+}
