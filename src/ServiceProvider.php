@@ -3,12 +3,19 @@
 namespace Lucasa\ComposerPhp;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use Lucasa\ComposerPhp\Console\PublishCommand;
 
 class ServiceProvider extends BaseServiceProvider
 {
     public function boot()
     {
         $this->publishAssets();
+        $this->registerCommands();
+    }
+
+    public function register()
+    {
+        //
     }
 
     private function publishAssets()
@@ -18,9 +25,17 @@ class ServiceProvider extends BaseServiceProvider
         ], 'commands');
     }
 
+    private function registerCommands()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                PublishCommand::class,
+            ]);
+        }
+    }
+
     private function packagePath($path)
     {
         return __DIR__ . "/../$path";
     }
-
 }
