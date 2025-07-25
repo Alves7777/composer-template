@@ -3,7 +3,7 @@
         'name' => 'lucasa/composer-php',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '3a1c6ac73195902bb85dd3e44075866491b67f74',
+        'reference' => '2242a8ae6a605150c767726d49fced45473c76e4',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'lucasa/composer-php' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '3a1c6ac73195902bb85dd3e44075866491b67f74',
+            'reference' => '2242a8ae6a605150c767726d49fced45473c76e4',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
