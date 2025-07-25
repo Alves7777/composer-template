@@ -1,6 +1,7 @@
 {
     "name": "lucasa/composer-php",
     "description": "Criar Crud através de linha de comando",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Lucasa\\ComposerPhp\\": "src/"
