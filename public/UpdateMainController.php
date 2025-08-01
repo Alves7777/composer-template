@@ -13,7 +13,7 @@ class UpdateMainController extends Command
     public function handle()
     {
         $controllerPath = base_path('app/Http/Controllers/Controller.php');
-        $stubPath = app_path('Console/Commands/stubs/Controller.stub');
+        $stubPath = app_path('Console/Commands/Stubs/Controller.stub');
 
         if (!File::exists($controllerPath)) {
             $this->error('Controller principal não encontrado.');
