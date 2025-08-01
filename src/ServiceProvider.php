@@ -23,6 +23,21 @@ class ServiceProvider extends BaseServiceProvider
         $this->publishes([
             $this->packagePath('public/') => base_path('app/Console/Commands'),
         ], 'commands');
+
+        $files = [
+            'View/CreateControllerPattern.php',
+            'View/CreateRepositoryPattern.php',
+            'View/CreateRoutePattern.php',
+            'View/CreateServicePattern.php',
+            'Api/UpdateMainController.php',
+            'MakeDockerComposeCommand.php',
+            'MakeDockerfileCommand.php',
+        ];
+        foreach ($files as $file) {
+            $this->publishes([
+                $this->packagePath('public/' . $file) => base_path('app/Console/Commands/' . $file),
+            ], 'commands-' . strtolower(str_replace('.php', '', $file)));
+        }
     }
 
     private function registerCommands()

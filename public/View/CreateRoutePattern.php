@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class CreateRoutePattern extends GeneratorCommand
 {
-    protected $name = 'make:route {nameClass}';
+    protected $name = 'la:route {nameClass}';
 
     protected $description = 'Create a new route class';
 
@@ -20,7 +20,7 @@ class CreateRoutePattern extends GeneratorCommand
     }
     protected function getStub()
     {
-        return  app_path() . '/Console/Commands/Stubs/route.stub';
+        return  app_path() . '/Console/Commands/Stubs/View/route_view.stub';
     }
     protected function getDefaultNamespace($rootNamespace)
     {

@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class CreateControllerPattern extends GeneratorCommand
 {
-    protected $name = 'make:controller_pattern {nameClass}';
+    protected $name = 'la:controller_pattern {nameClass}';
 
     protected $description = 'Create a new controller pattern class';
 
@@ -20,7 +20,7 @@ class CreateControllerPattern extends GeneratorCommand
     }
     protected function getStub()
     {
-        return  app_path() . '/Console/Commands/Stubs/controller_pattern.stub';
+        return  app_path() . '/Console/Commands/Stubs/View/controller_pattern.stub';
     }
     protected function getDefaultNamespace($rootNamespace)
     {

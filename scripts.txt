@@ -1,0 +1,3 @@
+Criar um comando para adicionar container no docker-compose.yml
+Criar um comando para adicionar dockefile
+Criar comando para criar crud completo API

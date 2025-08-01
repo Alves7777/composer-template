@@ -1,0 +1,44 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: {{container}}_app
+        volumes:
+            - .:/var/www/html
+        ports:
+            - "{{app_port}}:80"
+        networks:
+            - laravel
+        environment:
+            - APP_ENV=local
+            - APP_DEBUG=true
+            - DB_HOST=mysql
+            - DB_DATABASE=bank_management
+            - DB_USERNAME=alves
+            - DB_PASSWORD=1994
+        depends_on:
+            - mysql
+        command: php -S 0.0.0.0:80 -t public
+
+    mysql:
+        image: mysql:8.0
+        container_name: {{container}}_mysql
+        restart: unless-stopped
+        ports:
+            - "{{mysql_port}}:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: 1994
+            MYSQL_DATABASE: bank_management
+            MYSQL_USER: alves
+            MYSQL_PASSWORD: 1994
+        volumes:
+            - mysql_data:/var/lib/mysql
+        networks:
+            - laravel
+
+networks:
+    laravel:
+
+volumes:
+    mysql_data:

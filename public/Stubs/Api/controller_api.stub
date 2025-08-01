@@ -1,0 +1,67 @@
+<?php
+
+namespace App\Http\Controllers\V1\{{studly}};
+
+use App\Core\Services\ApiResponseService;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\{{studly}}\Store{{studly}}Request;
+use App\Http\Requests\{{studly}}\Update{{studly}}Request;
+use App\Services\{{studly}}\{{studly}}Service;
+use Illuminate\Http\JsonResponse;
+use Exception;
+
+class {{studly}}Controller extends Controller
+{
+    private {{studly}}Service $service;
+
+    public function __construct({{studly}}Service $service)
+    {
+        $this->service = $service;
+    }
+
+    public function index(): JsonResponse
+    {
+        $data = $this->service->all();
+        return $this->success($data);
+    }
+
+    public function store(Store{{studly}}Request $request): JsonResponse
+    {
+        try {
+            $data = $this->service->create($request->validated());
+            return $this->success($data, '{{studly}} criado com sucesso');
+        } catch (Exception $e) {
+            return $this->fail($e->getMessage(), $e->getCode());
+        }
+    }
+
+    public function show($id): JsonResponse
+    {
+        try {
+            $data = $this->service->find($id);
+            return $this->success($data);
+        } catch (Exception $e) {
+            return $this->fail($e->getMessage(), $e->getCode());
+        }
+    }
+
+    public function update(Update{{studly}}Request $request, $id): JsonResponse
+    {
+        try {
+            $data = $this->service->update($id, $request->validated());
+            return $this->success($data, '{{studly}} atualizado com sucesso');
+        } catch (Exception $e) {
+            return $this->fail($e->getMessage(), $e->getCode());
+        }
+    }
+
+    public function destroy($id): JsonResponse
+    {
+        try {
+            $this->service->delete($id);
+            return $this->success(null, '{{studly}} deletado com sucesso');
+        } catch (Exception $e) {
+            return $this->fail($e->getMessage(), $e->getCode());
+        }
+    }
+}

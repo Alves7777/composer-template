@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class CreateServicePattern extends GeneratorCommand
 {
-    protected $name = 'make:service {nameClass}';
+    protected $name = 'la:service {nameClass}';
 
     protected $description = 'Create a new service class';
 
@@ -20,7 +20,7 @@ class CreateServicePattern extends GeneratorCommand
     }
     protected function getStub()
     {
-        return  app_path() . '/Console/Commands/Stubs/service.stub';
+        return  app_path() . '/Console/Commands/Stubs/View/service.stub';
     }
     protected function getDefaultNamespace($rootNamespace)
     {

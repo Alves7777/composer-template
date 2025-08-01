@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Routes\{{studly}};
+
+use App\Http\Controllers\V1\{{studly}}\{{studly}}Controller;
+use Illuminate\Support\Facades\Route;
+
+class {{studly}}Routes
+{
+    public static function routes() : void
+    {
+        Route::apiResource('{{snake}}', {{studly}}Controller::class);
+    }
+}

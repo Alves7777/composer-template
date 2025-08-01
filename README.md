@@ -19,16 +19,20 @@
 3. Publish the public assets:
 
     ```
-   php artisan vendor:publish --provider="Lucasa\ComposerPhp\ServiceProvider" --tag=commands
+   Para publicar tudo:
+   php artisan vendor:publish --tag=commands
+   Para publicar um arquivo específico, por exemplo, MakeDockerComposeCommand.php:
+   php artisan vendor:publish --tag=commands-make-docker-compose-command
 
     ```
 4. Type the commands you want in the terminal:
 
       ```
-   php artisan controller_pattern {nameClass}
-   php artisan service_pattern {nameClass}
-   php artisan route_pattern {nameClass}
-   php artisan repository_pattern {nameClass}
-   php artisan make:update-main-controller
-   
-      ```
+   php artisan la:controller_pattern {nameClass}
+   php artisan la:service_pattern {nameClass}
+   php artisan la:route_pattern {nameClass}
+   php artisan la:repository_pattern {nameClass}
+   php artisan la:update-main-controller
+   php artisan la:docker-compose --container=bank_management --app-port=8090 --mysql-port=3311
+   php artisan la:dockerfile
+   ```

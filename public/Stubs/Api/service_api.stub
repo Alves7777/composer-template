@@ -1,0 +1,51 @@
+<?php
+
+namespace App\Services\{{studly}};
+
+use App\Repositories\{{studly}}\{{studly}}Repository;
+use Exception;
+
+class {{studly}}Service
+{
+    private {{studly}}Repository $repository;
+
+    public function __construct({{studly}}Repository $repository)
+    {
+        $this->repository = $repository;
+    }
+
+    public function create(array $data)
+    {
+        return $this->repository->create($data);
+    }
+
+    public function all()
+    {
+        return $this->repository->all();
+    }
+
+    public function find($id)
+    {
+        $item = $this->repository->find($id);
+        if (!$item) {
+            throw new Exception('{{studly}} não encontrado', 404);
+        }
+        return $item;
+    }
+
+    public function update($id, array $data)
+    {
+        if (!$this->repository->update($id, $data)) {
+            throw new Exception('Falha ao atualizar {{studly}}', 400);
+        }
+        return $this->find($id);
+    }
+
+    public function delete($id)
+    {
+        if (!$this->repository->delete($id)) {
+            throw new Exception('Falha ao deletar {{studly}}', 400);
+        }
+        return true;
+    }
+}
