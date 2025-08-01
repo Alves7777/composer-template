@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f2470ce-bffb-4e72-978e-e1e38a80dc01" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/Stubs/Controller.stub" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/UpdateMainController.php" afterDir="false" />
+    <list default="true" id="8f2470ce-bffb-4e72-978e-e1e38a80dc01" name="Changes" comment="Ok">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +96,15 @@
       <workItem from="1669204296166" duration="129000" />
       <workItem from="1669726116439" duration="1005000" />
     </task>
+    <task id="LOCAL-00001" summary="Ok">
+      <option name="closed" value="true" />
+      <created>1754056422351</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754056422351</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,5 +120,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ok" />
   </component>
 </project>
