@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f2470ce-bffb-4e72-978e-e1e38a80dc01" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Stubs/Controller.stub" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/UpdateMainController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,6 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2HrekUXrQYhJM1WjcAVoTk75ti8" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,6 +59,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "//wsl$/Ubuntu/home/lucas/Documents/Lucas/composer-template",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
