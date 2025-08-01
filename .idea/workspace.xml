@@ -41,11 +41,14 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:/php-8.1.24/php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="2HrekUXrQYhJM1WjcAVoTk75ti8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,14 +58,17 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "//wsl.localhost/Ubuntu/home/lucas/composer-template/public/Stubs/Api",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -81,6 +87,14 @@
       <recent name="\\wsl.localhost\Ubuntu\home\lucas\composer-template\public" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PS-251.26927.60" />
+        <option value="bundled-php-predefined-a98d8de5180a-e5747d4f5a45-com.jetbrains.php.sharedIndexes-PS-251.26927.60" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -96,6 +110,7 @@
       <workItem from="1669156355552" duration="5799000" />
       <workItem from="1669204296166" duration="129000" />
       <workItem from="1669726116439" duration="1005000" />
+      <workItem from="1754072077931" duration="1633000" />
     </task>
     <task id="LOCAL-00001" summary="Ok">
       <option name="closed" value="true" />
