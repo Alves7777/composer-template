@@ -28,21 +28,24 @@
     php artisan la:publish
     ```
     
-    **Publicar comandos específicos:**
+    **Publicar comandos específicos (comando + seus stubs necessários):**
     ```bash
-    # Comandos para Views (CRUD tradicional)
+    # Comandos para Views (CRUD tradicional) - cada um inclui seu stub específico
     php artisan vendor:publish --tag=commands-createcontrollerpattern
     php artisan vendor:publish --tag=commands-createservicepattern
     php artisan vendor:publish --tag=commands-createroutepattern
     php artisan vendor:publish --tag=commands-createrepositorypattern
     
-    # Comandos para API
-    php artisan vendor:publish --tag=commands-createcrudcommand
-    php artisan vendor:publish --tag=commands-updatemaincontroller
+    # Comandos para API - incluem todos os stubs necessários
+    php artisan vendor:publish --tag=commands-createcrudcommand      # Inclui: controller_api.stub, service_api.stub, repository_api.stub, route_api.stub
+    php artisan vendor:publish --tag=commands-updatemaincontroller   # Inclui: Controller.stub
     
-    # Comandos para Docker
-    php artisan vendor:publish --tag=commands-makedockercomposecommand
-    php artisan vendor:publish --tag=commands-makedockerfilecommand
+    # Comandos para Docker - incluem seus stubs
+    php artisan vendor:publish --tag=commands-makedockercomposecommand  # Inclui: docker-compose.stub
+    php artisan vendor:publish --tag=commands-makedockerfilecommand     # Inclui: Dockerfile.stub
+    
+    # Publicar apenas os stubs (se necessário)
+    php artisan vendor:publish --tag=stubs
     ```
 
     ```
@@ -88,3 +91,37 @@ php artisan la:crud user
 php artisan la:docker-compose --container=meuapp --app-port=8080 --mysql-port=3306
 php artisan la:dockerfile
 ```
+
+## 3. Estrutura dos Arquivos Publicados
+
+Quando você publica os comandos, a seguinte estrutura será criada em `app/Console/Commands/`:
+
+```
+app/Console/Commands/
+├── Api/
+│   ├── CreateCrudCommand.php
+│   └── UpdateMainController.php
+├── View/
+│   ├── CreateControllerPattern.php
+│   ├── CreateRepositoryPattern.php
+│   ├── CreateRoutePattern.php
+│   └── CreateServicePattern.php
+├── MakeDockerComposeCommand.php
+├── MakeDockerfileCommand.php
+└── Stubs/
+    ├── Api/
+    │   ├── Controller.stub
+    │   ├── controller_api.stub
+    │   ├── repository_api.stub
+    │   ├── route_api.stub
+    │   └── service_api.stub
+    ├── View/
+    │   ├── controller_view.stub
+    │   ├── repository_view.stub
+    │   ├── route_view.stub
+    │   └── service_view.stub
+    ├── docker-compose.stub
+    └── Dockerfile.stub
+```
+
+**✅ Cada comando específico publica automaticamente seus Stubs necessários, garantindo que funcione corretamente!**
