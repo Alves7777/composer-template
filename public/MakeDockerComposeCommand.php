@@ -16,7 +16,7 @@ class MakeDockerComposeCommand extends Command
         $appPort = $this->option('app-port') ?? '8090';
         $mysqlPort = $this->option('mysql-port') ?? '3310';
         $composePath = base_path('docker-compose.yml');
-        $stubPath = __DIR__ . '/../../Stubs/docker-compose.stub';
+        $stubPath = __DIR__ . '/Stubs/docker-compose.stub';
 
         if (!File::exists($stubPath)) {
             $this->error('Stub do docker-compose não encontrado.');
@@ -27,15 +27,8 @@ class MakeDockerComposeCommand extends Command
         $content = str_replace(
             ['{{container}}', '{{app_port}}', '{{mysql_port}}'],
             [$container, $appPort, $mysqlPort],
-            $stub);
-
-        if (!File::exists($stubPath)) {
-            $this->error('Stub do docker-compose não encontrado.');
-            return;
-        }
-
-        $stub = File::get($stubPath);
-        $content = str_replace('{{container}}', $container, $stub);
+            $stub
+        );
 
         File::put($composePath, $content);
         $this->info('docker-compose.yml criado/atualizado com sucesso!');

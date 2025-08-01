@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputArgument;
 
 class CreateRepositoryPattern extends GeneratorCommand
 {
-    protected $name = 'la:repository {nameClass}';
+    protected $name = 'la:repository_pattern';
 
     protected $description = 'Create a new repository class';
 
@@ -18,9 +18,10 @@ class CreateRepositoryPattern extends GeneratorCommand
         $stub = parent::replaceClass($stub, $name);
         return str_replace('GenericRepository', $this->argument('nameClass'), $stub);
     }
+    
     protected function getStub()
     {
-        return  app_path() . '/Console/Commands/Stubs/View/repository.stub';
+        return app_path() . '/Console/Commands/Stubs/View/repository_view.stub';
     }
     protected function getDefaultNamespace($rootNamespace)
     {

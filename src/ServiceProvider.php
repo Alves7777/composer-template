@@ -24,12 +24,18 @@ class ServiceProvider extends BaseServiceProvider
             $this->packagePath('public/') => base_path('app/Console/Commands'),
         ], 'commands');
 
+        // Publica a pasta Stubs
+        $this->publishes([
+            $this->packagePath('public/Stubs/') => base_path('app/Console/Commands/Stubs'),
+        ], 'commands');
+
         $files = [
             'View/CreateControllerPattern.php',
             'View/CreateRepositoryPattern.php',
             'View/CreateRoutePattern.php',
             'View/CreateServicePattern.php',
             'Api/UpdateMainController.php',
+            'Api/CreateCrudCommand.php',
             'MakeDockerComposeCommand.php',
             'MakeDockerfileCommand.php',
         ];

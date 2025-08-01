@@ -13,12 +13,13 @@ class MakeDockerfileCommand extends Command
     public function handle()
     {
         $dockerfilePath = base_path('Dockerfile');
-        $stubPath = __DIR__ . '/../../Stubs/Dockerfile.stub';
+        $stubPath = __DIR__ . '/Stubs/Dockerfile.stub';
 
         if (!File::exists($stubPath)) {
             $this->error('Stub do Dockerfile não encontrado.');
             return;
         }
+        
         File::put($dockerfilePath, File::get($stubPath));
         $this->info('Dockerfile criado/atualizado com sucesso!');
     }
