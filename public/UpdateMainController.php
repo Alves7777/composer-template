@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\File;
 
 class UpdateMainController extends Command
 {
-    protected $signature = 'lucasa:update-main-controller';
+    protected $signature = 'make:update-main-controller';
     protected $description = 'Atualiza o Controller principal com métodos de response padrão';
 
     public function handle()

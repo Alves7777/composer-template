@@ -5,7 +5,7 @@
 1. Require the package using composer:
 
     ```
-    composer require lucasalves/crud-composer --ignore-platform-reqs 
+    composer require lucasa/crud-composer-php --ignore-platform-reqs 
     ```
 
 2. Add the service provider to the `providers` in `config/app.php`:
@@ -29,6 +29,6 @@
    php artisan service_pattern {nameClass}
    php artisan route_pattern {nameClass}
    php artisan repository_pattern {nameClass}
-   php artisan Controller {nameClass}
+   php artisan make:update-main-controller
    
       ```
