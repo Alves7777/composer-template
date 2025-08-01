@@ -29,5 +29,6 @@
    php artisan service_pattern {nameClass}
    php artisan route_pattern {nameClass}
    php artisan repository_pattern {nameClass}
+   php artisan Controller {nameClass}
    
       ```
