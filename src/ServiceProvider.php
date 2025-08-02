@@ -53,9 +53,9 @@ class ServiceProvider extends BaseServiceProvider
 
         // Publicações individuais - Comandos API (incluindo seus stubs)
         $this->publishes([
-            $this->packagePath('public/Api/UpdateMainController.php') => base_path('app/Console/Commands/Api/UpdateMainController.php'),
+            $this->packagePath('public/Api/UpdateMasterController.php') => base_path('app/Console/Commands/Api/UpdateMasterController.php'),
             $this->packagePath('public/Stubs/Api/Controller.stub') => base_path('app/Console/Commands/Stubs/Api/Controller.stub'),
-        ], 'commands-updatemaincontroller');
+        ], 'commands-updatemastercontroller');
 
         $this->publishes([
             $this->packagePath('public/Api/CreateCrudCommand.php') => base_path('app/Console/Commands/Api/CreateCrudCommand.php'),
