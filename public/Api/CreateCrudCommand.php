@@ -43,7 +43,7 @@ class CreateCrudCommand extends Command
 
         $this->ensureDirectoryExists(dirname($controllerPath));
         
-        $content = str_replace('{{className}}', $name, File::get($stubPath));
+        $content = str_replace('{{studly}}', $name, File::get($stubPath));
         File::put($controllerPath, $content);
         
         $this->info("Controller {$name}Controller criado.");
@@ -61,7 +61,7 @@ class CreateCrudCommand extends Command
 
         $this->ensureDirectoryExists(dirname($servicePath));
         
-        $content = str_replace('{{className}}', $name, File::get($stubPath));
+        $content = str_replace('{{studly}}', $name, File::get($stubPath));
         File::put($servicePath, $content);
         
         $this->info("Service {$name}Service criado.");
@@ -79,7 +79,7 @@ class CreateCrudCommand extends Command
 
         $this->ensureDirectoryExists(dirname($repositoryPath));
         
-        $content = str_replace('{{className}}', $name, File::get($stubPath));
+        $content = str_replace('{{studly}}', $name, File::get($stubPath));
         File::put($repositoryPath, $content);
         
         $this->info("Repository {$name}Repository criado.");
@@ -98,7 +98,7 @@ class CreateCrudCommand extends Command
         $this->ensureDirectoryExists(dirname($routePath));
         
         $content = str_replace(
-            ['{{className}}', '{{routeName}}'],
+            ['{{studly}}', '{{snake}}'],
             [$name, $snake],
             File::get($stubPath)
         );

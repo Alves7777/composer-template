@@ -2,7 +2,7 @@
 
 namespace App\Routes\{{studly}};
 
-use App\Http\Controllers\V1\{{studly}}\{{studly}}Controller;
+use App\Http\Controllers\V1\{{studly}}Controller;
 use Illuminate\Support\Facades\Route;
 
 class {{studly}}Routes
