@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f2470ce-bffb-4e72-978e-e1e38a80dc01" name="Changes" comment="refatorado todo o code">
-      <change beforePath="$PROJECT_DIR$/src/ServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServiceProvider.php" afterDir="false" />
+    <list default="true" id="8f2470ce-bffb-4e72-978e-e1e38a80dc01" name="Changes" comment="refatorado todo o code.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/lucas/composer-template/public/View",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/lucas/composer-template/public/Api",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,10 +76,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl.localhost\Ubuntu\home\lucas\composer-template\public\Api" />
+      <recent name="\\wsl.localhost\Ubuntu\home\lucas\composer-template\public\View" />
       <recent name="\\wsl.localhost\Ubuntu\home\lucas\composer-template\public\Stubs\Api" />
       <recent name="\\wsl.localhost\Ubuntu\home\lucas\composer-template\public\Stubs\View" />
       <recent name="\\wsl$\Ubuntu\home\lucas\Documents\Lucas\composer" />
-      <recent name="\\wsl$\Ubuntu\home\lucas\Documents\Lucas\composer\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl.localhost\Ubuntu\home\lucas\composer-template\public\Api" />
@@ -113,7 +114,7 @@
       <workItem from="1669204296166" duration="129000" />
       <workItem from="1669726116439" duration="1005000" />
       <workItem from="1754072077931" duration="1633000" />
-      <workItem from="1754160081085" duration="478000" />
+      <workItem from="1754160081085" duration="2094000" />
     </task>
     <task id="LOCAL-00001" summary="Ok">
       <option name="closed" value="true" />
@@ -163,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754071334928</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refatorado todo o code.">
+      <option name="closed" value="true" />
+      <created>1754161017512</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1754161017512</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +192,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ok" />
     <MESSAGE value="refatorado todo o code" />
-    <option name="LAST_COMMIT_MESSAGE" value="refatorado todo o code" />
+    <MESSAGE value="refatorado todo o code." />
+    <option name="LAST_COMMIT_MESSAGE" value="refatorado todo o code." />
   </component>
 </project>
