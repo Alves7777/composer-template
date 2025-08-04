@@ -88,7 +88,7 @@ class CreateCrudCommand extends Command
     private function createRoutes($name, $snake)
     {
         $stubPath = app_path('Console/Commands/Stubs/Api/route_api.stub');
-        $routePath = base_path("routes/api/{$snake}.php");
+        $routePath = base_path("app/Routes/Api/{$snake}.php");
 
         if (!File::exists($stubPath)) {
             $this->error('Stub da route não encontrado.');

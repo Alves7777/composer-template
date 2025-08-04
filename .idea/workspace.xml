@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8f2470ce-bffb-4e72-978e-e1e38a80dc01" name="Changes" comment="refatorado todo o code.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Api/CreateCrudCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/Api/CreateCrudCommand.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +118,7 @@
       <workItem from="1754160081085" duration="2094000" />
       <workItem from="1754163360221" duration="398000" />
       <workItem from="1754164501876" duration="7000" />
+      <workItem from="1754169812025" duration="5029000" />
     </task>
     <task id="LOCAL-00001" summary="Ok">
       <option name="closed" value="true" />
